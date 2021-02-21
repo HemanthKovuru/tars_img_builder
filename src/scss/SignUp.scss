@@ -1,0 +1,83 @@
+@import "./mixins";
+
+.signup-box {
+  width: 70rem;
+  height: 60rem;
+  border-radius: 1.5rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 8rem;
+}
+
+// sign up form
+.form {
+  &__signup {
+    width: 65%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.2rem;
+  }
+
+  &__input {
+    padding: 1.5rem;
+    border-radius: 0.6rem;
+    border: none;
+    opacity: 0.57;
+    border: 1px solid #707070;
+    width: 100%;
+  }
+}
+
+// custom input for differnt widths in form
+.custom__input {
+  grid-column: 1/-1;
+}
+
+.heading {
+  &__secondary {
+    font-size: 3.3rem;
+    margin-bottom: 1.3rem;
+    font-weight: 500;
+  }
+
+  &__sub {
+    font-size: 2.2rem;
+    margin-bottom: 5rem;
+  }
+}
+
+// exit button for popups
+.cross {
+  position: absolute;
+  top: 2.3rem;
+  right: 2.5rem;
+  font-size: 2.2rem;
+  cursor: pointer;
+
+  @include responsive(tabport) {
+    right: 19rem;
+  }
+}
+
+.btn-submit {
+  font-size: 2rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  margin: 2rem 0;
+  cursor: pointer;
+  //   font: normal normal 600 2.2rem Segoe UI;
+  background-color: #2ecc71;
+  color: #fff;
+
+  &:focus {
+    outline: none;
+  }
+}

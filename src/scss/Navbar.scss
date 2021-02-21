@@ -1,0 +1,61 @@
+// navbar
+
+@import "./mixins";
+
+.navbar {
+  position: relative;
+
+  &__container {
+    background-color: #fff;
+    box-shadow: 0 3px 6px #0000000f;
+  }
+  height: 7rem;
+  margin: 0 auto;
+
+  display: grid;
+  width: 114rem;
+
+  margin: 0 auto;
+  grid-template-columns: 1fr 70% 1fr;
+  line-height: 7rem;
+
+  &__right {
+    justify-self: end;
+  }
+
+  @include responsive(tablet) {
+    width: 100%;
+    padding: 0 1rem;
+    grid-template-columns: 1fr 30% 1fr;
+  }
+}
+
+.logo {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.btn {
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  outline: none;
+
+  &-signup {
+    margin-left: 2rem;
+    background-color: #4caf50;
+    color: #fff;
+  }
+}
+
+// search
+.search_field {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 3px;
+  border: 1px solid rgb(219, 219, 219);
+  letter-spacing: 1px;
+}
